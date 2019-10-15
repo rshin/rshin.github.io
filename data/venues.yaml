@@ -1,0 +1,81 @@
+arxiv:
+  fullName: arXiv
+  desc: ${fullName}
+
+ccs:
+  shortName: CCS
+  fullName: ACM Conference on Computer and Communications Security
+  desc: ${shortName} ${year}
+
+ccsw-ccs:
+  shortName: CCSW
+  fullName: Cloud Computing Security Workshop
+  desc: ${shortName} at CCS ${year}
+
+esorics:
+  shortName: ESORICS
+  fullName: European Symposium on Research in Computer Security
+  desc: ${shortName} ${year}
+
+icdcs:
+  shortName: ICDCS
+  fullName: IEEE International Conference on Distributed Computing Systems
+  desc: ${shortName} ${year}
+
+icdm:
+  shortName: ICDM
+  fullName: International Conference on Data Mining
+  desc: ${shortName} ${year}
+
+iclr:
+  shortName: ICLR
+  fullName: International Conference on Learning Representations
+  desc: ${shortName} ${year}
+
+iclr-workshop:
+  shortName: ICLR
+  fullName: International Conference on Learning Representations
+  desc: ${shortName} ${year} workshop track
+
+ieee-sp:
+  shortName: IEEE S&P
+  fullName: IEEE Symposium on Security and Privacy
+  desc: ${shortName} ${year}
+
+infer2control-neurips:
+  shortName: Infer2Control
+  fullName: "Infer to Control: Probabilistic Reinforcement Learning and Structured Control"
+  desc: ${shortName} workshop at NeurIPS ${year}
+
+mlcs-neurips:
+  fullName: Machine Learning and Computer Security
+  desc: ${fullName} workshop at NeurIPS ${year}
+
+ndss:
+  shortName: NDSS
+  fullName: Network and Distributed System Security Symposium
+  desc: ${shortName} ${year}
+
+nampi-icml:
+  shortName: NAMPI
+  fullName: Neural Abstract Machines & Program Induction
+  desc: ${shortName} workshop at ICML ${year}
+
+neurips:
+  shortName: NeurIPS
+  fullName: Neural Information Processing Systems
+  desc: ${shortName} ${year}
+
+usenix-security:
+  fullName: USENIX Security
+  desc: ${fullName} ${year}
+
+tist:
+  shortName: TIST
+  fullName: ACM Transactions on Intelligent Systems and Technology
+  desc: ${shortName}, published ${date}
+
+w2sp-ieeesp:
+  shortName: W2SP
+  fullName: Web 2.0 Security and Privacy
+  desc: ${shortName} workshop at IEEE S&P ${year}
