@@ -6,6 +6,35 @@
 # - project page
 
 # Preprints
+- title: "RAT-SQL: Relation-Aware Schema Encoding and Linking for Text-to-SQL Parsers"
+  authors:
+    [
+      Bailin Wang*,
+      Richard Shin*,
+      Xiaodong Liu,
+      Oleksandr Polozov,
+      Matthew Richardson
+    ]
+  published:
+    - venue: arxiv
+      date: 2019-11-10
+  links:
+    - pdf: https://arxiv.org/pdf/1911.04942
+  abstract: >
+    When translating natural language questions into SQL queries to answer
+    questions from a database, contemporary semantic parsing models struggle
+    to generalize to unseen database schemas. The generalization challenge
+    lies in (a) encoding the database relations in an accessible way for the
+    semantic parser, and (b) modeling alignment between database columns and
+    their mentions in a given query. We present a unified framework, based on
+    the relation-aware self-attention mechanism, to address schema encoding,
+    schema linking, and feature representation within a text-to-SQL encoder.
+    On the challenging Spider dataset this framework boosts the exact match
+    accuracy to 53.7%, compared to 47.4% for the state-of-the-art model
+    unaugmented with BERT embeddings. In addition, we observe qualitative
+    improvements in the model's understanding of schema linking and
+    alignment.
+
 - title: Encoding Database Schemas with Relation-Aware Self-Attention for Text-to-SQL Parsers
   authors: [Richard Shin]
   published:
