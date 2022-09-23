@@ -234,7 +234,7 @@
   published:
     - venue: icdm
       date: 2016-12-13
-  format: short paper
+      format: short paper
   links:
     - pdf: https://people.eecs.berkeley.edu/~dawnsong/papers/icdm-2016.pdf
     - code: https://github.com/giladkatz/ExploreKit
@@ -374,10 +374,10 @@
 # extended abstract
 - title: "FreeMarket: Shopping for free in Android applications"
   authors: [Daniel Reynaud, Richard Shin, Thomas R. Magrino, Edward X. Wu, Dawn Song]
-  format: extended abstract
   published:
     - venue: ndss
       date: 2012-02-05
+      format: extended abstract
   links:
     - pdf: https://www.ndss-symposium.org/wp-content/uploads/2017/09/05_2.pdf
 
@@ -460,10 +460,10 @@
 #
 - title: Imitation Learning of Hierarchical Programs via Variational Inference
   authors: [Roy Fox*, Richard Shin*, Pieter Abbeel, Ken Goldberg, Dawn Song, Ion Stoica]
-  format: extended abstract
   published:
     - venue: nampi-icml
       date: 2018-07-15
+      format: extended abstract
   links:
     - pdf: https://uclnlp.github.io/nampi/extended_abstracts/fox.pdf
 

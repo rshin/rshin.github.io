@@ -36,8 +36,6 @@ const Paper = styled(({ className, children: data }) => {
     )
     abstractBody = <Collapse isOpened={showAbstract}>{data.abstract}</Collapse>
   }
-  // TODO: add awards
-  // TODO: add paper format
   // TODO: add equal contribution
   return (
     <div className={className}>
@@ -114,12 +112,20 @@ const Venue = styled(({ className, children: data }) => {
     )
   }
 
+  let parentheticals = [];
+  if (data.award) {
+    parentheticals.push(<strong>{data.award}</strong>);
+  }
+  if (data.format) {
+    parentheticals.push(data.format);
+  }
+
   return (
     <p className={className}>
       {desc}{" "}
-      {data.award && (
+      {parentheticals.length > 0 && (
         <>
-          (<strong>{data.award}</strong>)
+          ({intersperse(parentheticals, ", ")})
         </>
       )}
     </p>
