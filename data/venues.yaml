@@ -2,6 +2,16 @@ arxiv:
   fullName: arXiv
   desc: ${fullName}
 
+acl:
+  shortName: ACL
+  fullName: Association for Computational Linguistics
+  desc: ${shortName} ${year}
+
+acl-findings:
+  shortName: ACL
+  fullName: Association for Computational Linguistics
+  desc: Findings of ${shortName} ${year}
+
 ccs:
   shortName: CCS
   fullName: ACM Conference on Computer and Communications Security
@@ -11,6 +21,16 @@ ccsw-ccs:
   shortName: CCSW
   fullName: Cloud Computing Security Workshop
   desc: ${shortName} at CCS ${year}
+
+emnlp:
+  shortName: EMNLP
+  fullName: Empirical Methods in Natural Language Processing
+  desc: ${shortName} ${year}
+
+enlsp-neurips:
+  shortName: ENLSP
+  fullName: Efficient Natural Language and Speech Processing
+  desc: ${shortName} workshop at NeurIPS ${year}
 
 esorics:
   shortName: ESORICS
@@ -50,6 +70,11 @@ infer2control-neurips:
 mlcs-neurips:
   fullName: Machine Learning and Computer Security
   desc: ${fullName} workshop at NeurIPS ${year}
+
+naacl:
+  shortName: NAACL
+  fullName: North American Chapter of the Association for Computational Linguistics
+  desc: ${shortName} ${year}
 
 ndss:
   shortName: NDSS

@@ -6,6 +6,205 @@
 # - project page
 
 # Preprints
+- title: "BenchCLAMP: A Benchmark for Evaluating Language Models on Semantic Parsing"
+  authors:
+    [
+      Subhro Roy,
+      Sam Thomson,
+      Tongfei Chen,
+      Richard Shin,
+      Adam Pauls,
+      Jason Eisner,
+      Benjamin Van Durme,
+    ]
+  published:
+    - venue: arxiv
+      date: 2022-06-21
+  links:
+    - pdf: https://arxiv.org/pdf/2206.10668.pdf
+    - code: https://github.com/microsoft/semantic_parsing_as_constrained_lm
+  abstract: >
+    We introduce BenchCLAMP, a Benchmark to evaluate Constrained LAnguage Model
+    Parsing, which produces semantic outputs based on the analysis of input text
+    through constrained decoding of a prompted or fine-tuned language model.
+    Developers of pretrained language models currently benchmark on
+    classification, span extraction and free-text generation tasks. Semantic
+    parsing is neglected in language model evaluation because of the complexity
+    of handling task-specific architectures and representations. Recent work has
+    shown that generation from a prompted or fine-tuned language model can
+    perform well at semantic parsing when the output is constrained to be a
+    valid semantic representation. BenchCLAMP includes context-free grammars for
+    six semantic parsing datasets with varied output meaning representations, as
+    well as a constrained decoding interface to generate outputs covered by
+    these grammars. We provide low, medium, and high resource splits for each
+    dataset, allowing accurate comparison of various language models under
+    different data regimes. Our benchmark supports both prompt-based learning as
+    well as fine-tuning, and provides an easy-to-use toolkit for language model
+    developers to evaluate on semantic parsing.
+
+- title: Hierarchical Variational Imitation Learning of Control Programs
+  authors:
+    [
+      Roy Fox,
+      Richard Shin,
+      William Paul,
+      Yitian Zou,
+      Dawn Song,
+      Ken Goldberg,
+      Pieter Abbeel,
+      Ion Stoica,
+    ]
+  published:
+    - venue: arxiv
+      date: 2019-12-29
+  links:
+    - pdf: https://arxiv.org/pdf/1912.12612
+  abstract: >
+    Autonomous agents can learn by imitating teacher demonstrations of the
+    intended behavior. Hierarchical control policies are ubiquitously useful for
+    such learning, having the potential to break down structured tasks into
+    simpler sub-tasks, thereby improving data efficiency and generalization. In
+    this paper, we propose a variational inference method for imitation learning
+    of a control policy represented by parametrized hierarchical procedures
+    (PHP), a program-like structure in which procedures can invoke
+    sub-procedures to perform sub-tasks. Our method discovers the hierarchical
+    structure in a dataset of observation-action traces of teacher
+    demonstrations, by learning an approximate posterior distribution over the
+    latent sequence of procedure calls and terminations. Samples from this
+    learned distribution then guide the training of the hierarchical control
+    policy. We identify and demonstrate a novel benefit of variational inference
+    in the context of hierarchical imitation learning: in decomposing the policy
+    into simpler procedures, inference can leverage acausal information that is
+    unused by other methods. Training PHP with variational inference outperforms
+    LSTM baselines in terms of data efficiency and generalization, requiring
+    less than half as much data to achieve a 24% error rate in executing the
+    bubble sort algorithm, and to achieve no error in executing Karel programs.
+  
+# Conference publications
+- title: Few-Shot Semantic Parsing with Language Models Trained On Code
+  authors: [Richard Shin, Benjamin Van Durme]
+  published:
+    - venue: naacl
+      date: 2022-07-12
+      format: short paper
+  links:
+    - pdf: https://aclanthology.org/2022.naacl-main.396.pdf
+  abstract: >
+    Large language models can perform semantic parsing with little training
+    data, when prompted with in-context examples. It has been shown that this
+    can be improved by formulating the problem as paraphrasing into canonical
+    utterances, which casts the underlying meaning representation into a
+    controlled natural language-like representation. Intuitively, such models
+    can more easily output canonical utterances as they are closer to the
+    natural language used for pre-training. Recently, models also pre-trained on
+    code, like OpenAI Codex, have risen in prominence. For semantic parsing
+    tasks where we map natural language into code, such models may prove more
+    adept at it. In this paper, we test this hypothesis and find that Codex
+    performs better on such tasks than equivalent GPT-3 models. We evaluate on
+    Overnight and SMCalFlow and find that unlike GPT-3, Codex performs similarly
+    when targeting meaning representations directly, perhaps because meaning
+    representations are structured similar to code in these datasets.
+
+- title: Addressing Resource and Privacy Constraints in Semantic Parsing Through Data Augmentation
+  authors: 
+    [
+      Kevin Yang,
+      Olivia Deng,
+      Charles Chen,
+      Richard Shin,
+      Subhro Roy,
+      Benjamin Van Durme,
+    ]
+  published:
+    - venue: acl-findings
+      date: 2022-05-23
+  links:
+    - pdf: https://aclanthology.org/2022.findings-acl.291.pdf
+  abstract: >
+    We introduce a novel setup for low-resource task-oriented semantic parsing
+    which incorporates several constraints that may arise in real-world
+    scenarios: (1) lack of similar datasets/models from a related domain, (2)
+    inability to sample useful logical forms directly from a grammar, and (3)
+    privacy requirements for unlabeled natural utterances. Our goal is to
+    improve a low-resource semantic parser using utterances collected through
+    user interactions. In this highly challenging but realistic setting, we
+    investigate data augmentation approaches involving generating a set of
+    structured canonical utterances corresponding to logical forms, before
+    simulating corresponding natural language and filtering the resulting pairs.
+    We find that such approaches are effective despite our restrictive setup: in
+    a low-resource setting on the complex SMCalFlow calendaring dataset (Andreas
+    et al. 2020), we observe 33% relative improvement over a non-data-augmented
+    baseline in top-1 match.
+
+- title: Guided K-best Selection for Semantic Parsing Annotation
+  authors:
+    [
+      Anton Belyy,
+      Chieh-Yang Huang,
+      Jacob Andreas,
+      Emmanouil Antonios Platanios,
+      Sam Thomson,
+      Richard Shin,
+      Subhro Roy,
+      Aleksandr Nisnevich,
+      Charles Chen,
+      Benjamin Van Durme,
+    ]
+  published:
+    - venue: acl
+      date: 2022-05-23
+      format: demo track
+  links:
+    - pdf: https://aclanthology.org/2022.acl-demo.11.pdf
+  abstract: >
+    Collecting data for conversational semantic parsing is a time-consuming and
+    demanding process. In this paper we consider, given an incomplete dataset
+    with only a small amount of data, how to build an AI-powered
+    human-in-the-loop process to enable efficient data collection. A guided
+    K-best selection process is proposed, which (i) generates a set of possible
+    valid candidates; (ii) allows users to quickly traverse the set and filter
+    incorrect parses; and (iii) asks users to select the correct parse, with
+    minimal modification when necessary. We investigate how to best support
+    users in efficiently traversing the candidate set and locating the correct
+    parse, in terms of speed and accuracy. In our user study, consisting of five
+    annotators labeling 300 instances each, we find that combining keyword
+    searching, where keywords can be used to query relevant candidates, and
+    keyword suggestion, where representative keywords are automatically
+    generated, enables fast and accurate annotation.
+
+- title: Constrained Language Models Yield Few-Shot Semantic Parsers
+  authors:
+    [
+      Richard Shin,
+      Christopher H. Lin,
+      Sam Thomson,
+      Charles Chen,
+      Subhro Roy,
+      Emmanouil Antonios Platanios,
+      Adam Pauls,
+      Dan Klein,
+      Jason Eisner,
+      Benjamin Van Durme,
+    ]
+  published:
+    - venue: emnlp
+      date: 2021-11-10
+  links:
+    - pdf: https://aclanthology.org/2021.emnlp-main.608.pdf
+    - code: https://github.com/microsoft/semantic_parsing_with_constrained_lm
+  abstract: >
+    We explore the use of large pretrained language models as few-shot semantic
+    parsers. The goal in semantic parsing is to generate a structured meaning
+    representation given a natural language input. However, language models are
+    trained to generate natural language. To bridge the gap, we use language
+    models to paraphrase inputs into a controlled sublanguage resembling English
+    that can be automatically mapped to a target meaning representation. Our
+    results demonstrate that with only a small amount of data and very little
+    code to convert into English-like representations, our blueprint for rapidly
+    bootstrapping semantic parsers leads to surprisingly effective performance
+    on multiple community tasks, greatly exceeding baseline methods also trained
+    on the same limited data.
+    
 - title: "RAT-SQL: Relation-Aware Schema Encoding and Linking for Text-to-SQL Parsers"
   authors:
     [
@@ -13,13 +212,14 @@
       Richard Shin*,
       Xiaodong Liu,
       Oleksandr Polozov,
-      Matthew Richardson
+      Matthew Richardson,
     ]
   published:
-    - venue: arxiv
-      date: 2019-11-10
+    - venue: acl
+      date: 2020-07-06
   links:
-    - pdf: https://arxiv.org/pdf/1911.04942
+    - pdf: https://aclanthology.org/2020.acl-main.677.pdf
+    - code: https://github.com/microsoft/rat-sql
   abstract: >
     When translating natural language questions into SQL queries to answer
     questions from a database, contemporary semantic parsing models struggle
@@ -35,26 +235,26 @@
     improvements in the model's understanding of schema linking and
     alignment.
 
-- title: Encoding Database Schemas with Relation-Aware Self-Attention for Text-to-SQL Parsers
-  authors: [Richard Shin]
-  published:
-    - venue: arxiv
-      date: 2019-06-20
-  links:
-    - pdf: https://arxiv.org/pdf/1906.11790
-    - code: https://github.com/rshin/seq2struct
-  abstract: >
-    When translating natural language questions into SQL queries to
-    answer questions from a database, we would like our methods to generalize
-    to domains and database schemas outside of the training set. To handle
-    complex questions and database schemas with a neural encoder-decoder
-    paradigm, it is critical to properly encode the schema as part of the input
-    with the question. In this paper, we use relation-aware self-attention
-    within the encoder so that it can reason about how the tables and columns
-    in the provided schema relate to each other and use this information in
-    interpreting the question. We achieve significant gains on the
-    recently-released Spider dataset with 42.94% exact match accuracy, compared
-    to the 18.96% reported in published work.
+# - title: Encoding Database Schemas with Relation-Aware Self-Attention for Text-to-SQL Parsers
+#   authors: [Richard Shin]
+#   published:
+#     - venue: arxiv
+#       date: 2019-06-20
+#   links:
+#     - pdf: https://arxiv.org/pdf/1906.11790
+#     - code: https://github.com/rshin/seq2struct
+#   abstract: >
+#     When translating natural language questions into SQL queries to
+#     answer questions from a database, we would like our methods to generalize
+#     to domains and database schemas outside of the training set. To handle
+#     complex questions and database schemas with a neural encoder-decoder
+#     paradigm, it is critical to properly encode the schema as part of the input
+#     with the question. In this paper, we use relation-aware self-attention
+#     within the encoder so that it can reason about how the tables and columns
+#     in the provided schema relate to each other and use this information in
+#     interpreting the question. We achieve significant gains on the
+#     recently-released Spider dataset with 42.94% exact match accuracy, compared
+#     to the 18.96% reported in published work.
 
 # Conference publications
 - title: Program Synthesis and Semantic Parsing with Learned Code Idioms
@@ -64,7 +264,7 @@
     - venue: neurips
       date: 2019-12-08
   links:
-    - pdf: https://arxiv.org/abs/1906.10816
+    - pdf: https://proceedings.neurips.cc/paper/2019/file/cff34ad343b069ea6920464ad17d4bcf-Paper.pdf
   abstract: >
     Program synthesis of general-purpose source code from natural language
     specifications is challenging due to the need to reason about high-level
@@ -370,8 +570,6 @@
     estimation we are able to increase the precision of the top guess from
     20% to over 80% with only a halving of recall.
 
-
-# extended abstract
 - title: "FreeMarket: Shopping for free in Android applications"
   authors: [Daniel Reynaud, Richard Shin, Thomas R. Magrino, Edward X. Wu, Dawn Song]
   published:
@@ -432,13 +630,34 @@
     for defense against botnets.
 
 # Workshops
+- title: Pruning Pretrained Encoders with a Multitask Objective
+  authors: [Patrick Xia, Richard Shin]
+  published:
+    - venue: enlsp-neurips
+      date: 2021-12-13
+  links:
+    - pdf: https://arxiv.org/pdf/2112.05705.pdf
+  abstract: >
+    The sizes of pretrained language models make them challenging and expensive
+    to use when there are multiple desired downstream tasks. In this work, we
+    adopt recent strategies for model pruning during finetuning to explore the
+    question of whether it is possible to prune a single encoder so that it can
+    be used for multiple tasks. We allocate a fixed parameter budget and compare
+    pruning a single model with a multitask objective against the best ensemble
+    of single-task models. We find that under two pruning strategies
+    (element-wise and rank pruning), the approach with the multitask objective
+    outperforms training models separately when averaged across all tasks, and
+    it is competitive on each individual one. Additional analysis finds that
+    using a multitask objective during pruning can also be an effective method
+    for reducing model sizes for low-resource tasks.
+
 - title: Hierarchical Imitation Learning via Variational Inference of Control Programs
   authors: [Roy Fox, Richard Shin, William Paul, Yitian Zou, Dawn Song, Ken Goldberg, Pieter Abbeel, Ion Stoica]
   published:
     - venue: infer2control-neurips
       date: 2018-12-12
   links:
-    - pdf: https://roydfox.com/pdf/Fox2018Hierarchical.pdf
+    - pdf: https://royf.org/pub/pdf/Fox2018Hierarchical.pdf
   abstract: >
     Autonomous controllers can be trained by imitation learning from
     demonstrations of the intended control. Hierarchical imitation learning
