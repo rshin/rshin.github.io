@@ -6,14 +6,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-styled-components`,
-    {
-      resolve: `gatsby-plugin-mdx`,
-      options: {
-        defaultLayouts: {
-          default: require.resolve('./src/components/layout.js'),
-        },
-      },
-    },
+    `gatsby-plugin-mdx`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -38,6 +31,7 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-image`,
     //     {
     //       resolve: `gatsby-plugin-manifest`,
     //       options: {

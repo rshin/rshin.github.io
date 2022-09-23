@@ -5,7 +5,12 @@ import Collapse from "react-collapse"
 import Papers from "../../data/papers.yaml"
 import Authors from "../../data/authors.yaml"
 import Venues from "../../data/venues.yaml"
-import _ from "lodash-es"
+import flow from "lodash/fp/flow"
+import groupBy from "lodash/fp/groupBy"
+import map from "lodash/fp/map"
+import min from "lodash/fp/min"
+import reverse from "lodash/fp/reverse"
+import sortBy from "lodash/fp/sortBy"
 import { rhythm } from "../utils/typography"
 
 const interpolate = (s, params) => {
@@ -71,7 +76,7 @@ const Paper = styled(({ className, children: data }) => {
 `
 const Author = ({ children: authorName }) => {
   // TODO: Need a better solution for "equal contribution"
-  const authorInfo = Authors[authorName.replace(/\*$/, '')]
+  const authorInfo = Authors[authorName.replace(/\*$/, "")]
   if (authorInfo && authorInfo.website) {
     return <a href={authorInfo.website}>{authorName}</a>
   }
@@ -111,9 +116,12 @@ const Venue = styled(({ className, children: data }) => {
 
   return (
     <p className={className}>
-      {desc}
-      {' '}  
-      {data.award && <>(<strong>{data.award}</strong>)</>}
+      {desc}{" "}
+      {data.award && (
+        <>
+          (<strong>{data.award}</strong>)
+        </>
+      )}
     </p>
   )
 })`
@@ -133,25 +141,26 @@ const Links = styled.ul`
 `
 
 export default () => {
-  const papersGroupedByYear = _(Papers)
-    .map(p => ({
-      firstPublished: _(p.published)
-        .map(pub => pub.date)
-        .min(),
+  const papersGroupedByYear = flow(
+    map((p) => ({
+      firstPublished: flow(
+        map((pub) => pub.date),
+        min
+      )(p.published),
       ...p,
-    }))
-    .sortBy("firstPublished")
-    .reverse()
-    .groupBy(p => new Date(p.firstPublished).getFullYear())
-    .value()
+    })),
+    sortBy("firstPublished"),
+    reverse,
+    groupBy((p) => new Date(p.firstPublished).getFullYear())
+  )(Papers)
 
   const allYears = Object.keys(papersGroupedByYear)
   return (
     <div>
-      {_(allYears)
-        .sortBy(parseInt)
-        .reverse()
-        .map(yearStr => (
+      {flow(
+        sortBy(parseInt),
+        reverse,
+        map((yearStr) => (
           <>
             <h3>{yearStr}</h3>
             {papersGroupedByYear[yearStr].map((data, index) => (
@@ -159,7 +168,7 @@ export default () => {
             ))}
           </>
         ))
-        .value()}
+      )(allYears)}
     </div>
   )
 }

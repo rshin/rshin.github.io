@@ -109,7 +109,7 @@
     demonstrate, using the Karel DSL and a small Calculator DSL, that training
     deep networks on these distributions leads to improved cross-distribution
     generalization performance.
-    
+
 
 - title: Improving Neural Program Synthesis with Inferred Execution Traces
   authors: [Richard Shin, Illia Polosukhin, Dawn Song]
@@ -229,7 +229,7 @@
     theoretical and empirical evaluations, we find that PIANO is secure,
     reliable, personalizable, and efficient.
 
-- title: "ExploreKit: Automatic Feature Generation and Selection" 
+- title: "ExploreKit: Automatic Feature Generation and Selection"
   authors: [Gilad Katz, Richard Shin, Dawn Song]
   published:
     - venue: icdm
@@ -282,7 +282,7 @@
   published:
     - venue: usenix-security
       date: 2015-08-12
-  links: 
+  links:
     - pdf: https://www.usenix.org/system/files/conference/usenixsecurity15/sec15-paper-shin.pdf
   abstract: >
     Binary analysis facilitates many important applications like malware
@@ -303,8 +303,17 @@
     benchmarks, and performs comparably on the remaining two.
 
 - title: Joint Link Prediction and Attribute Inference Using a Social-Attribute Network
-  authors: [Neil Zhenqiang Gong, Ameet Talwalkar, Lester Mackey,
-Ling Huang, Richard Shin, Emil Stefanov, Elaine Shi, Dawn Song]
+  authors:
+    [
+      Neil Zhenqiang Gong,
+      Ameet Talwalkar,
+      Lester Mackey,
+      Ling Huang,
+      Richard Shin,
+      Emil Stefanov,
+      Elaine Shi,
+      Dawn Song,
+    ]
   published:
      - venue: tist
        date: 2014-04
