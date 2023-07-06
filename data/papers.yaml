@@ -85,10 +85,10 @@
   authors:
     [
       Fatemehsadat Mireshghallah,
-      Richard Shin,
       Yu Su,
       Tatsunori Hashimoto,
-      Jason Eisner
+      Jason Eisner,
+      Richard Shin
     ]
   published:
     - venue: acl
