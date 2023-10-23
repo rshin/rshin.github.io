@@ -6,42 +6,39 @@
 # - project page
 
 # Preprints
-- title: "BenchCLAMP: A Benchmark for Evaluating Language Models on Semantic Parsing"
+- title: Privacy-Preserving In-Context Learning with Differentially Private Few-Shot Generation
   authors:
     [
-      Subhro Roy,
-      Sam Thomson,
-      Tongfei Chen,
+      Xinyu Tang,
       Richard Shin,
-      Adam Pauls,
-      Jason Eisner,
-      Benjamin Van Durme,
+      Huseyin A. Inan,
+      Andre Manoel,
+      Fatemehsadat Mireshghallah,
+      Zinan Lin,
+      Sivakanth Gopi,
+      Janardhan Kulkarni,
+      Robert Sim
     ]
   published:
     - venue: arxiv
-      date: 2022-06-21
+      date: 2023-09-21
   links:
-    - pdf: https://arxiv.org/pdf/2206.10668.pdf
-    - code: https://github.com/microsoft/semantic_parsing_as_constrained_lm
+    - pdf: https://arxiv.org/pdf/2309.11765
+    - code: https://github.com/microsoft/dp-few-shot-generation
   abstract: >
-    We introduce BenchCLAMP, a Benchmark to evaluate Constrained LAnguage Model
-    Parsing, which produces semantic outputs based on the analysis of input text
-    through constrained decoding of a prompted or fine-tuned language model.
-    Developers of pretrained language models currently benchmark on
-    classification, span extraction and free-text generation tasks. Semantic
-    parsing is neglected in language model evaluation because of the complexity
-    of handling task-specific architectures and representations. Recent work has
-    shown that generation from a prompted or fine-tuned language model can
-    perform well at semantic parsing when the output is constrained to be a
-    valid semantic representation. BenchCLAMP includes context-free grammars for
-    six semantic parsing datasets with varied output meaning representations, as
-    well as a constrained decoding interface to generate outputs covered by
-    these grammars. We provide low, medium, and high resource splits for each
-    dataset, allowing accurate comparison of various language models under
-    different data regimes. Our benchmark supports both prompt-based learning as
-    well as fine-tuning, and provides an easy-to-use toolkit for language model
-    developers to evaluate on semantic parsing.
-
+    We study the problem of in-context learning (ICL) with large language
+    models (LLMs) on private datasets. This scenario poses privacy risks,
+    as LLMs may leak or regurgitate the private examples demonstrated in
+    the prompt. We propose a novel algorithm that generates synthetic
+    few-shot demonstrations from the private dataset with formal
+    differential privacy (DP) guarantees, and show empirically that it can
+    achieve effective ICL. We conduct extensive experiments on standard
+    benchmarks and compare our algorithm with non-private ICL and zero-shot
+    solutions. Our results demonstrate that our algorithm can achieve
+    competitive performance with strong privacy levels. These results open
+    up new possibilities for ICL with privacy protection for a broad range
+    of applications. 
+      
 - title: Hierarchical Variational Imitation Learning of Control Programs
   authors:
     [
@@ -81,6 +78,42 @@
     bubble sort algorithm, and to achieve no error in executing Karel programs.
   
 # Conference publications
+- title: "BenchCLAMP: A Benchmark for Evaluating Language Models on Semantic Parsing"
+  authors:
+    [
+      Subhro Roy,
+      Sam Thomson,
+      Tongfei Chen,
+      Richard Shin,
+      Adam Pauls,
+      Jason Eisner,
+      Benjamin Van Durme,
+    ]
+  published:
+    - venue: neurips-datasets
+      date: 2023-12-10
+  links:
+    - pdf: https://arxiv.org/pdf/2206.10668.pdf
+    - code: https://github.com/microsoft/semantic_parsing_as_constrained_lm
+  abstract: >
+    We introduce BenchCLAMP, a Benchmark to evaluate Constrained LAnguage Model
+    Parsing, which produces semantic outputs based on the analysis of input text
+    through constrained decoding of a prompted or fine-tuned language model.
+    Developers of pretrained language models currently benchmark on
+    classification, span extraction and free-text generation tasks. Semantic
+    parsing is neglected in language model evaluation because of the complexity
+    of handling task-specific architectures and representations. Recent work has
+    shown that generation from a prompted or fine-tuned language model can
+    perform well at semantic parsing when the output is constrained to be a
+    valid semantic representation. BenchCLAMP includes context-free grammars for
+    six semantic parsing datasets with varied output meaning representations, as
+    well as a constrained decoding interface to generate outputs covered by
+    these grammars. We provide low, medium, and high resource splits for each
+    dataset, allowing accurate comparison of various language models under
+    different data regimes. Our benchmark supports both prompt-based learning as
+    well as fine-tuning, and provides an easy-to-use toolkit for language model
+    developers to evaluate on semantic parsing.
+
 - title: "Privacy-Preserving Domain Adaptation of Semantic Parsers"
   authors:
     [

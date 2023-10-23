@@ -91,6 +91,11 @@ neurips:
   fullName: Neural Information Processing Systems
   desc: ${shortName} ${year}
 
+neurips-datasets:
+  shortName: NeurIPS
+  fullName: Neural Information Processing Systems Track on Datasets and Benchmarks
+  desc: ${shortName} ${year}, Datasets and Benchmarks Track
+
 usenix-security:
   fullName: USENIX Security
   desc: ${fullName} ${year}
